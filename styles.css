@@ -1,0 +1,200 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f4f4f4;
+}
+* {
+  box-sizing: border-box;
+}
+.inp {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+.inp .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 26px;
+  color: #9098a9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+.inp .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #07f;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all 0.15s ease;
+}
+.inp input {
+  -webkit-appearance: none;
+  width: calc(100% - 58px);
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 58px;
+  font-size: 30px;
+  font-weight: 500;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all 0.15s ease;
+}
+.inp input:hover {
+  background: rgba(34,50,84,0.03);
+}
+.inp input:not(:placeholder-shown) + span {
+  color: #0078d7;
+  transform: translateY(-36px) scale(0.5);
+}
+.inp input:focus {
+  background: none;
+  outline: none;
+}
+.inp input:focus + span {
+  color: #0078d7;
+  transform: translateY(-36px) scale(0.5);
+}
+.inp input:focus + span + .border {
+  transform: scaleX(1);
+}
+#go {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  background: #ff0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background: #eaeaea;
+  transition: all 300ms ease;
+}
+#go svg {
+  width: 80%;
+}
+#go:hover {
+  background: #0078d7;
+}
+#go:hover svg path {
+  fill: white;
+}
+
+.oneentity {
+  flex: 1;
+}
+
+#queryBar {
+  position: relative;
+  top: 70px;
+  width: 800px;
+  margin: auto;
+}
+
+
+#rangeLimit {
+  display: block;
+  position: relative;
+  top: 150px;
+  margin: auto;
+  width: 720px;
+  text-align: center;
+}
+#entitiesContainer {
+  display: block;
+  position: relative;
+  top: 170px;
+  margin: auto;
+  width: 720px;
+  text-align: center;
+}
+
+.oneentity {
+  display: inline-block;
+  width: 160px;
+  text-align: left;
+  vertical-align: top;
+  background-color: #dedede;
+  border-radius: 5px;
+  min-height: 150px;
+  margin: 3px;
+  padding: 5px;
+}
+.oneentity > div {
+  display: table-row;
+  width: 100%;
+}
+.oneentity > div > span {
+  display: table-cell;
+  padding: 3px;
+}
+.oneentity > div > span:first-child {
+  font-weight: bold;
+  font-size: small;
+}
+.oneentity h1 {
+  font-weight: bold;
+  font-size: x-small;
+  text-transform: uppercase;
+}
+
+
+#results {
+  display: block;
+  position: relative;
+  top: 200px;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+}
+
+
+
+chunk > verse {
+  display: none;
+}
+.resultTable {
+  display: table;
+  font-family: SBL Biblit;
+  font-size: 24px;
+}
+.resultRow {
+  display: table-row;
+}
+.resultRow > div {
+  display: table-cell;
+  width: 50%;
+  padding: 3px;
+}
+.net {
+    text-align: left;
+}
+.wlc {
+    direction: rtl;
+    text-align: right;
+    font-size: 120%;
+}
+.temp1 {
+  color: orange;
+}
+.temp2 {
+  color: red;
+}
+.verseNumber {
+    font-size: xx-small;
+    top: -5px;
+    position: relative;
+    color: #0078d7;
+}
