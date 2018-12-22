@@ -114,6 +114,7 @@
 		const knownCorpora = {
 			"torah": ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"],
 			"former prophets": ["Joshua", "Judges", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings"],
+			"historical books": ["Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther"],
 			"wisdom literature": ["Job", "Proverbs", "Ecclesiastes"],
 			"prophets": ["Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habbakuk", "Zephaniah", "Haggai", "Zechariah", "Malachi"],
 			"minor prophets": ["Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habbakuk", "Zephaniah", "Haggai", "Zechariah", "Malachi"]
@@ -138,8 +139,16 @@
 		const conversionList = Object.keys(conversions)
 		const prepareQuery = () => {
 			const syntaxLimit = entity_store.syntax_range ? entity_store.syntax_range[0].value : "clause"
-			const corpusLimitVariable = entity_store.corpus_filter ? entity_store.corpus_filter[0].value : []
-			let corpusLimit = knownCorporaList.includes(corpusLimitVariable) ? knownCorpora[corpusLimitVariable] : [corpusLimitVariable]
+			let corpusLimit = []
+			if (entity_store.corpus_filter) {
+				const corpusLimitVariable = entity_store.corpus_filter[0].value
+				if (knownCorporaList.includes(corpusLimitVariable)) {
+					corpusLimit = knownCorpora[corpusLimitVariable]
+				}
+				else {
+					corpusLimit = [corpusLimitVariable]
+				}
+			}
 
 			const apiTemplate = {
 				"query": [],
@@ -180,11 +189,11 @@
 						})
 						value = searchTerm.normalize()
 					}
-					else if (conversionList.includes(value)) {
+					else if (conversionList.includes(""+t.value)) {
 						value = conversions[""+t.value]
 					}
 					else {
-						value = t.value+""
+						value = ""+t.value
 					}
 
 					searchTermTemplate.data[conversions[""+t._entity]] = value
