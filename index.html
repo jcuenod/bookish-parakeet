@@ -67,7 +67,10 @@
 				entitiesDiv(response.entities)
 				entity_store = response.entities
 
-				const corpusLimit = response.entities.corpus_filter ? response.entities.corpus_filter[0].value : "anywhere"
+				const corpusLimit = response.entities.corpus_filter ? 
+							response.entities.corpus_filter[0].value === "Old Testament" ?
+							"anywhere" :
+					response.entities.corpus_filter[0].value : "anywhere"
 				const syntaxLimit = response.entities.syntax_range ? response.entities.syntax_range[0].value : "clause"
 				const rangeLimitText = `searching <b>${syntaxLimit}s</b> in <b>${corpusLimit}</b> for:`
 				$("#rangeLimit").innerHTML = rangeLimitText
