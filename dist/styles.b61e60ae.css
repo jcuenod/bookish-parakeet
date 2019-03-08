@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+
+/**
+ * FANCY TRANSITION HEADER
+ **/
+
+#header {
+  display: grid;
+  background-color: #fafafb;
+  transition: height 300ms ease,
+              padding 300ms ease,
+              background-color 600ms ease;
+  height: 60px;
+  justify-items: center;
+  align-items: center;
+  padding: 0.4vh 2vw;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+}
+
+#header.fullheight {
+  height: 80vh;
+  padding: 0 20vw 20vh 20vw;
+}
+
+
+input.search {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0.8rem;
+  font-family: Nunito;
+  font-weight: inherit;
+  line-height: 1.4;
+  color: #3b4045;
+  background-color: #FFF;
+  border: 1px solid #dde0e4;
+  border-radius: 0.4rem;
+  box-shadow: none;
+  font-size: 1rem;
+  height: 1.3rem;
+  transition: font-size 300ms ease,
+              height 300ms ease,
+              border-color 300ms ease,
+              box-shadow 200ms ease,
+              padding 300ms ease;
+}
+
+
+.fullheight input.search {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.8rem;
+  height: 2.1rem;
+  border-color: #bbc0c4;
+}
+
+input.search:focus {
+  outline: none;
+  border-color: #66bfff !important;
+  box-shadow: 0 0 0 4px rgba(0,149,255,0.15);
+}
+
+
+
+/**
+ * SEARCH RESULTS/CHAPTER TEXT VIEWS
+ **/
+
+/*# sourceMappingURL=/styles.b61e60ae.css.map */

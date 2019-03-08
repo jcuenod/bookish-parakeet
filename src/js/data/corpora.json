@@ -1,0 +1,77 @@
+{
+    "pentateuch": {
+        "synonyms": [
+            "pentateuch",
+            "torah",
+            "books of moses",
+            "book of moses",
+            "moses",
+        ],
+        "range": ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"]
+    },
+    "hexateuch": {
+        "synonyms": [
+            "hexateuch",
+        ],
+        "range": ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua"]
+    },
+    "wisdom literature": {
+        "synonyms": [
+            "wisdom literature",
+            "wisdom books",
+        ],
+        "range": ["Job", "Proverbs", "Ecclesiastes"]
+    },
+    "prophets": {
+        "synonyms": [
+            "prophets",
+            "latter prophets",
+        ],
+        "range": ["Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habbakuk", "Zephaniah", "Haggai", "Zechariah", "Malachi"]
+    },
+    "second isaiah": {
+        "synonyms": [
+            "second isaiah",
+            "deutero isaiah",
+            "deutero-isaiah",
+            "deuteroisaiah",
+            "2nd isaiah",
+        ]
+    },
+    "third isaiah": {
+        "synonyms": [
+            "third isaiah",
+            "trito isaiah",
+            "trito-isaiah",
+            "tritoisaiah",
+            "3rd isaiah",
+        ]
+    },
+    "minor prophets": {
+        "synonyms": [
+            "minor prophets",
+            "book of the twelve",
+            "book of the 12",
+        ],
+        "range": ["Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habbakuk", "Zephaniah", "Haggai", "Zechariah", "Malachi"]
+    },
+    "book of the 4": {
+        "synonyms": [
+            "book of the 4",
+            "book of the four",
+        ],
+        "range": ["Hosea", "Amos", "Micah", "Zephaniah"]
+    },
+    "former prophets": {
+        "synonyms": [
+            "former prophets",
+        ],
+        "range": ["Joshua", "Judges", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings"],
+    },
+    "historical books": {
+        "synonyms": [
+            "historical books",
+        ],
+        "range": ["Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther"]
+    },
+}

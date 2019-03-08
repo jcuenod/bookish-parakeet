@@ -1,0 +1,25 @@
+{
+  "name": "bookish-parakeet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcuenod/bookish-parakeet.git"
+  },
+  "author": "James Cuénod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcuenod/bookish-parakeet/issues"
+  },
+  "homepage": "https://github.com/jcuenod/bookish-parakeet#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.0",
+    "sass": "^1.17.2"
+  }
+}
