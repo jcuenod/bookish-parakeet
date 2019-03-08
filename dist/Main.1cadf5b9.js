@@ -43226,6 +43226,127 @@ module.exports = {
     }
   }]
 };
+},{}],"js/data/wit_results.json":[function(require,module,exports) {
+module.exports = {
+  "_text": "find 3ms verbs in the piel stem with the root \u05D6\u05DB\u05E8 and fem nouns in the same clause from gen 2 to isaiah 17",
+  "entities": {
+    "search_term": [{
+      "suggested": true,
+      "entities": {
+        "composite_pgn": [{
+          "confidence": 1,
+          "value": "3ms",
+          "type": "value",
+          "_entity": "composite_pgn",
+          "_body": "3ms",
+          "_start": 0,
+          "_end": 3
+        }],
+        "part_of_speech": [{
+          "confidence": 1,
+          "value": "verbs",
+          "type": "value",
+          "_entity": "part_of_speech",
+          "_body": "verbs",
+          "_start": 4,
+          "_end": 9
+        }],
+        "stem": [{
+          "confidence": 1,
+          "value": "piel",
+          "type": "value",
+          "_entity": "stem",
+          "_body": "piel",
+          "_start": 17,
+          "_end": 21
+        }],
+        "root": [{
+          "suggested": true,
+          "confidence": 0.84021522674545,
+          "value": "\u05D6\u05DB\u05E8",
+          "type": "value",
+          "_entity": "root",
+          "_body": "\u05D6\u05DB\u05E8",
+          "_start": 41,
+          "_end": 44
+        }]
+      },
+      "confidence": 0.93368072282504,
+      "value": "3ms verbs in the piel stem with the root \u05D6\u05DB\u05E8",
+      "type": "value",
+      "_entity": "search_term",
+      "_body": "3ms verbs in the piel stem with the root \u05D6\u05DB\u05E8",
+      "_start": 5,
+      "_end": 49
+    }, {
+      "suggested": true,
+      "entities": {
+        "gender": [{
+          "confidence": 1,
+          "value": "fem",
+          "type": "value",
+          "_entity": "gender",
+          "_body": "fem",
+          "_start": 0,
+          "_end": 3
+        }],
+        "part_of_speech": [{
+          "confidence": 1,
+          "value": "subs",
+          "type": "value",
+          "_entity": "part_of_speech",
+          "_body": "nouns",
+          "_start": 4,
+          "_end": 9
+        }]
+      },
+      "confidence": 0.98373638953799,
+      "value": "fem nouns",
+      "type": "value",
+      "_entity": "search_term",
+      "_body": "fem nouns",
+      "_start": 54,
+      "_end": 63
+    }],
+    "syntax_range": [{
+      "confidence": 1,
+      "value": "clause",
+      "type": "value",
+      "_entity": "syntax_range",
+      "_body": "clause",
+      "_start": 76,
+      "_end": 82
+    }],
+    "from": [{
+      "suggested": true,
+      "confidence": 0.91010131397042,
+      "value": "gen 2",
+      "type": "value",
+      "_entity": "reference",
+      "_role": "from",
+      "_body": "gen 2",
+      "_start": 88,
+      "_end": 93
+    }],
+    "to": [{
+      "suggested": true,
+      "confidence": 0.89470815335319,
+      "value": "isaiah 17",
+      "type": "value",
+      "_entity": "reference",
+      "_role": "to",
+      "_body": "isaiah 17",
+      "_start": 97,
+      "_end": 106
+    }],
+    "intent": [{
+      "confidence": 0.99999999999169,
+      "value": "search",
+      "_entity": "intent"
+    }]
+  },
+  "msg_id": "1NNpXIcwcoHqlp5eq"
+};
 },{}],"js/Main.js":[function(require,module,exports) {
 var ViewSearchResults = require("/js/views/SearchResults.js");
 
@@ -43240,11 +43361,17 @@ var url = function url(queryString) {
 };
 
 var clickEvent = function clickEvent() {
+  console.log("find 3ms verbs in the piel stem with the root \u05D6\u05DB\u05E8 and fem nouns in the same clause from gen 2 to isaiah 17");
   var queryString = $(".search").value;
-  $("#header").classList.remove("fullheight");
-  setTimeout(function () {
-    return ViewSearchResults(result_data.results);
-  }, 300);
+  $("#header").classList.remove("fullheight"); //setTimeout(() => ViewSearchResults(result_data.results), 300)
+  //TODO: make sure loading spinner thing is showing when header scrolls to top
+  //simulate wit response:
+
+  {
+    var response = require("/js/data/wit_results.json");
+
+    console.log(response);
+  }
   return;
   fetch(url(queryString), {
     headers: new Headers({
@@ -43254,8 +43381,8 @@ var clickEvent = function clickEvent() {
   }).then(function (response) {
     return response.json();
   }).then(function (response) {
-    console.log(response.entities);
-    $("#header").classList.remove("fullheight");
+    console.log(response.entities); //$("#header").classList.remove("fullheight")
+    //TODO: remove the loading spinner thing
   });
 };
 
@@ -43268,7 +43395,7 @@ $(".search").addEventListener("keydown", function (e) {
       clickEvent();
     }
 }, false);
-},{"/js/views/SearchResults.js":"js/views/SearchResults.js","/js/data/search_results.json":"js/data/search_results.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"/js/views/SearchResults.js":"js/views/SearchResults.js","/js/data/search_results.json":"js/data/search_results.json","/js/data/wit_results.json":"js/data/wit_results.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -43296,7 +43423,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43873" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44205" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

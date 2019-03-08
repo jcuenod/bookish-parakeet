@@ -7,10 +7,18 @@ const $ = (x) => { return document.querySelector(x) }
 const url = (queryString) => {return `https://api.wit.ai/message?v=20170307&verbose=true&q=${queryString}`}
 
 const clickEvent = () => {
+	console.log("find 3ms verbs in the piel stem with the root \u05d6\u05db\u05e8 and fem nouns in the same clause from gen 2 to isaiah 17")
 	const queryString = $(".search").value
 	$("#header").classList.remove("fullheight")
-	setTimeout(() => ViewSearchResults(result_data.results), 300)
-	
+	//setTimeout(() => ViewSearchResults(result_data.results), 300)
+	//TODO: make sure loading spinner thing is showing when header scrolls to top
+
+
+	//simulate wit response:
+	{
+		const response = require("/js/data/wit_results.json")
+		console.log(response)
+	}
 
 	return
 	fetch(url(queryString), {
@@ -22,7 +30,8 @@ const clickEvent = () => {
 		return response.json()
 	}).then((response) => {
 		console.log(response.entities)
-		$("#header").classList.remove("fullheight")
+		//$("#header").classList.remove("fullheight")
+		//TODO: remove the loading spinner thing
 	})
 }
 

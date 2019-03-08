@@ -1,13 +1,14 @@
 // Display things
+const $ = (x) => {return document.querySelector(x)}
 
 const englishCell = (verses, content) => {
 	return verses.map((v, i) => {
-		return `<span class="verseNumber">${v%1000}</span><span class="verseText">${content[i]}</span>`
+		return `<td class="net"><span class="verseText">${content[i]}</span></td>`
 	})
 }
 const hebrewCell = (verses, content) => {
 	return verses.map((v, i) => {
-		return `<span class="verseNumber">${v%1000}</span><span class="verseText">${hebrewContent(content[i])}</span>`
+		return `<td class="wlc"><span class="verseNumber">${v%1000}</span><span class="verseText">${hebrewContent(content[i])}</span></td>`
 	})
 }
 const hebrewContent = (text) => {
@@ -23,17 +24,20 @@ const hebrewContent = (text) => {
 	}).join("")
 }
 
-const resultOutput = (results) => {
-	const surroundWithFrame = (content) => {return `<div class="resultTable">${content}</div>`}
+const updateChapterText = (results) => {
+	const surroundWithFrame = (content) => {return `<table class="resultTable">${content}</table>`}
 	const resultRow = (row) => {
-		return `<div class="resultRow">
-			<div class="wlc">${hebrewCell(row.verses, row.verses.map(v => row.text[v].wlc))}</div>
-			<div class="net">${englishCell(row.verses, row.verses.map(v => row.text[v].net))}</div>
-		</div>`
+		return `
+
+		<tr>
+			${hebrewCell(row.verses, row.verses.map(v => row.text[v].wlc))}
+			${englishCell(row.verses, row.verses.map(v => row.text[v].net))}
+		</tr>`
 	}
 	const resultTable = results.map(r => {
 		return resultRow(r)
 	}).join("")
-	return surroundWithFrame(resultTable)
-}
 
+	$("#results").innerHTML = surroundWithFrame(resultTable)
+}
+export default updateChapterText

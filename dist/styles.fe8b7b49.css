@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   height: 60px;
-  padding: 0.4vh 2vw;
+  padding: 5px 30px;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -69,21 +69,20 @@
   font-family: SBL Biblit;
   font-size: 20px;
   width: 900px;
+  table-layout: fixed;
+  max-width: 95vw;
 }
 
-.resultRow:hover {
+tr:hover {
   background-color: #f8f8f8;
 }
-.resultRow > div {
+tr > td {
   padding: 3px 10px;
-  max-width: 400px;
 }
-
-.net {
+tr > td.net {
   text-align: left;
 }
-
-.wlc {
+tr > td.wlc {
   direction: rtl;
   text-align: right;
   font-size: 130%;
