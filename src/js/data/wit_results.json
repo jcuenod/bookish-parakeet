@@ -1,0 +1,143 @@
+{
+   "_text": "find 3ms verbs in the piel stem with the root \u05d6\u05db\u05e8 and fem nouns in the same clause from gen 2 to isaiah 17",
+   "entities": {
+      "search_term": [
+         {
+            "suggested": true,
+            "entities": {
+               "composite_pgn": [
+                  {
+                     "confidence": 1,
+                     "value": "3ms",
+                     "type": "value",
+                     "_entity": "composite_pgn",
+                     "_body": "3ms",
+                     "_start": 0,
+                     "_end": 3
+                  }
+               ],
+               "part_of_speech": [
+                  {
+                     "confidence": 1,
+                     "value": "verbs",
+                     "type": "value",
+                     "_entity": "part_of_speech",
+                     "_body": "verbs",
+                     "_start": 4,
+                     "_end": 9
+                  }
+               ],
+               "stem": [
+                  {
+                     "confidence": 1,
+                     "value": "piel",
+                     "type": "value",
+                     "_entity": "stem",
+                     "_body": "piel",
+                     "_start": 17,
+                     "_end": 21
+                  }
+               ],
+               "root": [
+                  {
+                     "suggested": true,
+                     "confidence": 0.84021522674545,
+                     "value": "\u05d6\u05db\u05e8",
+                     "type": "value",
+                     "_entity": "root",
+                     "_body": "\u05d6\u05db\u05e8",
+                     "_start": 41,
+                     "_end": 44
+                  }
+               ]
+            },
+            "confidence": 0.93368072282504,
+            "value": "3ms verbs in the piel stem with the root \u05d6\u05db\u05e8",
+            "type": "value",
+            "_entity": "search_term",
+            "_body": "3ms verbs in the piel stem with the root \u05d6\u05db\u05e8",
+            "_start": 5,
+            "_end": 49
+         },
+         {
+            "suggested": true,
+            "entities": {
+               "gender": [
+                  {
+                     "confidence": 1,
+                     "value": "fem",
+                     "type": "value",
+                     "_entity": "gender",
+                     "_body": "fem",
+                     "_start": 0,
+                     "_end": 3
+                  }
+               ],
+               "part_of_speech": [
+                  {
+                     "confidence": 1,
+                     "value": "subs",
+                     "type": "value",
+                     "_entity": "part_of_speech",
+                     "_body": "nouns",
+                     "_start": 4,
+                     "_end": 9
+                  }
+               ]
+            },
+            "confidence": 0.98373638953799,
+            "value": "fem nouns",
+            "type": "value",
+            "_entity": "search_term",
+            "_body": "fem nouns",
+            "_start": 54,
+            "_end": 63
+         }
+      ],
+      "syntax_range": [
+         {
+            "confidence": 1,
+            "value": "clause",
+            "type": "value",
+            "_entity": "syntax_range",
+            "_body": "clause",
+            "_start": 76,
+            "_end": 82
+         }
+      ],
+      "from": [
+         {
+            "suggested": true,
+            "confidence": 0.91010131397042,
+            "value": "gen 2",
+            "type": "value",
+            "_entity": "reference",
+            "_role": "from",
+            "_body": "gen 2",
+            "_start": 88,
+            "_end": 93
+         }
+      ],
+      "to": [
+         {
+            "suggested": true,
+            "confidence": 0.89470815335319,
+            "value": "isaiah 17",
+            "type": "value",
+            "_entity": "reference",
+            "_role": "to",
+            "_body": "isaiah 17",
+            "_start": 97,
+            "_end": 106
+         }
+      ],
+      "intent": [
+         {
+            "confidence": 0.99999999999169,
+            "value": "search",
+            "_entity": "intent"
+         }
+      ]
+   },
+   "msg_id": "1NNpXIcwcoHqlp5eq"
+}
